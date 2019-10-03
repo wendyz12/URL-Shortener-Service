@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TinyUrl</title>
+
+		<!-- Angular js CDN -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-resource.min.js"></script>
+
+		<!-- 
+		<script src="/node_modules/chart.js/dist/Chart.min.js"></script>
+    	<script src="/node_modules/angular-chart.js/dist/angular-chart.min.js"></script> -->
+
+    	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.1.1/angular-chart.min.js"></script>
+		
+		<script src="/public/js/app.js"></script> <!-- import Angular app.js; otherwise, Angualr js doesn't know how to access tinyurlApp in line 15 -->
+		<script src="/public/js/controllers/homeController.js"></script>
+		<script src="/public/js/controllers/urlController.js"></script>
+
+		
+		<!-- Boostrap CDN -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	</head>
+	<body ng-app = "tinyurlApp"> <!-- Angular js will start to monitor and manage the html page from here by using a js file - app.js under js folder -->
+		<header>
+			<div class = "container">
+				<div class = "navbar navbar-default">
+					<div class = "navbar-header">
+						<a class = "navbar-brand" href="#/">TinyUrl</a> <!-- it there's "#", it means Angular router will take care; otherwise, backend will handle the url -->
+					</div>
+					
+				</div>
+				
+			</div>
+		</header>
+		<div class = "container">
+			<div ng-view></div> <!-- embed other files; this is done by Angular Js-->
+			
+		</div>
+
+	</body>
+</html>
